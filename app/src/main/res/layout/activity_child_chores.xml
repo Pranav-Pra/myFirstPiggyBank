@@ -4,19 +4,27 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_gravity="center"
     tools:context=".ChildChores">
 
-    <ScrollView
-        android:layout_width="409dp"
-        android:layout_height="729dp"
+
+    <LinearLayout
+        android:id="@+id/root"
+        android:layout_width="415dp"
+        android:layout_height="721dp"
+        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <LinearLayout
-            android:layout_width="match_parent"
+        <Button
+            android:id="@+id/loadChoresButton"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical" />
-    </ScrollView>
+            android:gravity="center"
+            android:onClick="loadChores"
+            android:text="Load Chores" />
+    </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
