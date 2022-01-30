@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1081499886416",
+    "project_id": "my-first-piggybank",
+    "storage_bucket": "my-first-piggybank.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1081499886416:android:5af83fc01e9ec8102bc255",
+        "android_client_info": {
+          "package_name": "com.example.myfirstpiggybank"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1081499886416-j41r2iv8taidgf30j1tjkd9ohtnk9c5b.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBeJyyPD_rmDSX08iUF5Dad-9m9Ysibedc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1081499886416-j41r2iv8taidgf30j1tjkd9ohtnk9c5b.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
