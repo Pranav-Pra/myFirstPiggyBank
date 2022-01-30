@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyFirstPiggyBank">
         <activity
+            android:name=".ChildChores"
+            android:exported="false" />
+        <activity
             android:name=".ParentChores"
             android:exported="false" />
         <activity

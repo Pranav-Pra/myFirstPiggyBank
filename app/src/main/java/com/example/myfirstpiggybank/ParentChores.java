@@ -9,6 +9,8 @@ import android.widget.EditText;
 public class ParentChores extends AppCompatActivity {
 
     private EditText choreET, descET, valueET;
+    private String chore, desc;
+    private int value;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,6 +22,10 @@ public class ParentChores extends AppCompatActivity {
     }
 
     public void addChore(View v){
+        chore = choreET.getText().toString();
+        desc = descET.getText().toString();
+        value = Integer.parseInt(valueET.getText().toString());
+        Chore choreTask = new Chore(chore, desc, value);
 
     }
 }
