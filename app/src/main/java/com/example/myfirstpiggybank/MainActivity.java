@@ -71,12 +71,19 @@ public class MainActivity extends AppCompatActivity {
                     signUpChild(signUpEmailC,signUpPasswordC);
                 }
                 break;
-            case R.id.signInButton:
-                EditText emailSignIn = findViewById(R.id.emailSignInPT);
-                EditText passSignIn = findViewById(R.id.passSignInPT);
-                String loginEmail = emailSignIn.getText().toString();
-                String loginPassword = passSignIn.getText().toString();
-                signIn(loginEmail,loginPassword);
+            case R.id.parentSignInButton:
+                EditText emailSignInP = findViewById(R.id.emailSignInPT);
+                EditText passSignInP = findViewById(R.id.passSignInPT);
+                String loginEmailP = emailSignInP.getText().toString();
+                String loginPasswordP = passSignInP.getText().toString();
+                signInParent(loginEmailP,loginPasswordP);
+                break;
+            case R.id.childSignInButton:
+                EditText emailSignInC = findViewById(R.id.emailSignInPT);
+                EditText passSignInC = findViewById(R.id.passSignInPT);
+                String loginEmailC = emailSignInC.getText().toString();
+                String loginPasswordC = passSignInC.getText().toString();
+                signInChild(loginEmailC,loginPasswordC);
                 break;
         }
     }
@@ -126,14 +133,14 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    public void signIn(String email, String password) {
+    public void signInParent(String email, String password) {
         mAuth.signInWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
 
-                            //add if statement to determine if parent or child
+
                             Intent homeIntent = new Intent(getApplicationContext(), parent.class);
                             startActivity(homeIntent);
 
@@ -146,4 +153,25 @@ public class MainActivity extends AppCompatActivity {
                     }
                 });
     }
+    public void signInChild(String email, String password) {
+        mAuth.signInWithEmailAndPassword(email, password)
+                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        if (task.isSuccessful()) {
+
+
+                            Intent homeIntent = new Intent(getApplicationContext(), child.class);
+                            startActivity(homeIntent);
+
+                        }
+                        // add more specific error messages
+                        else {
+                            Toast.makeText(MainActivity.this, "Login Failed.",
+                                    Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                });
+    }
+
 }
