@@ -23,27 +23,13 @@ public class ChildChores extends AppCompatActivity {
 //        Chore choreTwo = new Chore("brush", "brush brush", 10);
 //        chores.add(choreOne);
 //        chores.add(choreTwo);
-    }
-
-    public void loadChores(View v) {
 
         LinearLayout root = (LinearLayout) findViewById(R.id.root);
 
-            LinearLayout chore = new LinearLayout(this);
-            chore.setOrientation(LinearLayout.HORIZONTAL);
+        LinearLayout chore = new LinearLayout(this);
+        chore.setOrientation(LinearLayout.HORIZONTAL);
 
-                    TextView choreValue = new TextView(this);
-            choreValue.setText("bababa");
-
-        Button completeTaskButton = new Button(this);
-            completeTaskButton.setText("Finished Chore!");
-
-            chore.addView(choreValue);
-
-            chore.addView(completeTaskButton);
-        root.addView(chore);
-
-//        for (int i = 0; i < chores.size(); i++) {
+//      for (int i = 0; i < chores.size(); i++) {
 //
 //            LinearLayout chore = new LinearLayout(this);
 //            chore.setOrientation(LinearLayout.HORIZONTAL);
@@ -67,5 +53,6 @@ public class ChildChores extends AppCompatActivity {
 //
 //            root.addView(chore);
 //        }
+
     }
 }
