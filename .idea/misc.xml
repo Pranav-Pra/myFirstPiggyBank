@@ -3,7 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/prasa/Documents/GitHub/myFirstPiggyBank/app/src/main/res/layout/activity_child.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/prasa/Documents/GitHub/myFirstPiggyBank/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/prasa/Documents/GitHub/myFirstPiggyBank/app/src/main/res/layout/activity_parent.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/prasa/Documents/GitHub/myFirstPiggyBank/app/src/main/res/layout/sign_in.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/prasa/Documents/GitHub/myFirstPiggyBank/app/src/main/res/layout/sign_up.xml" value="0.25416666666666665" />
       </map>
