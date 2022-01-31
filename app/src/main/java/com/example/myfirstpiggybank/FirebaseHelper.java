@@ -45,11 +45,11 @@ public class FirebaseHelper {
                 }
             });
         } else {
-            Log.d("LFRA", "Inside addUser()");
+            FirebaseUser user = mAuth.getCurrentUser();
+            Log.d("LFRA", "Current user: " + user.getUid());
             Map<String, Object> userData = new HashMap<>();
             userData.put("email", username);
             userData.put("name", name);
-            FirebaseUser user = mAuth.getCurrentUser();
             db.collection("kids").document(user.getUid()).set(userData)
                     .addOnSuccessListener(new OnSuccessListener<Void>() {
                         @Override
