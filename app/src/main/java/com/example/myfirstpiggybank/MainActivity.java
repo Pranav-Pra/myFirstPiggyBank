@@ -68,13 +68,6 @@ public class MainActivity extends AppCompatActivity {
                 String loginPasswordP = passSignInP.getText().toString();
                 signInParent(loginEmailP,loginPasswordP);
                 break;
-            case R.id.childSignInButton:
-                EditText emailSignInC = findViewById(R.id.emailSignInPT);
-                EditText passSignInC = findViewById(R.id.passSignInPT);
-                String loginEmailC = emailSignInC.getText().toString();
-                String loginPasswordC = passSignInC.getText().toString();
-                signInChild(loginEmailC,loginPasswordC);
-                break;
         }
     }
 
