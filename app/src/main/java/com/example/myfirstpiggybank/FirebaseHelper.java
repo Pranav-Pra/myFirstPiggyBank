@@ -28,11 +28,11 @@ public class FirebaseHelper {
         db = FirebaseFirestore.getInstance();
     }
 
-    public void addUser(String username, boolean isParent, String name) {
+    public void addUser(String username, boolean isParent, String name, String uid) {
         if(isParent) {
             Map<String, Object> userData = new HashMap<>();
             userData.put("email", username);
-            db.collection("parents").document(username).set(userData)
+            db.collection("parents").document(uid).set(userData)
                     .addOnSuccessListener(new OnSuccessListener<Void>() {
                         @Override
                         public void onSuccess(Void unused) {
@@ -46,11 +46,10 @@ public class FirebaseHelper {
             });
         } else {
             FirebaseUser user = mAuth.getCurrentUser();
-            Log.d("LFRA", "Current user: " + user.getUid());
             Map<String, Object> userData = new HashMap<>();
             userData.put("email", username);
             userData.put("name", name);
-            db.collection("kids").document(user.getUid()).set(userData)
+            db.collection("kids").document(uid).set(userData)
                     .addOnSuccessListener(new OnSuccessListener<Void>() {
                         @Override
                         public void onSuccess(Void unused) {

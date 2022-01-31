@@ -16,6 +16,7 @@ import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class parent extends AppCompatActivity {
 
@@ -45,6 +46,9 @@ public class parent extends AppCompatActivity {
     }
 
     public void toSignUpChild(View v) {
+        FirebaseUser user = mAuth.getCurrentUser();
+        String parentEmail = user.getEmail();
+
         EditText emailSignUpC = findViewById(R.id.emailSignUpChild);
         EditText passSignUpC = findViewById(R.id.passSignUpPT);
         EditText conPassSignUpC = findViewById(R.id.confirmPassSignUpPT);
@@ -54,20 +58,20 @@ public class parent extends AppCompatActivity {
         String confirmPasswordC = conPassSignUpC.getText().toString();
         String signUpNameC = nameSignUpC.getText().toString();
         if(confirmPasswordC.equals(signUpPasswordC)){
-            signUpChild(signUpEmailC,signUpPasswordC, signUpNameC);
+            signUpChild(signUpEmailC,signUpPasswordC, signUpNameC, parentEmail);
         }
     }
 
-    public void signUpChild(String email, String password, String name) {
+    public void signUpChild(String email, String password, String name, String uid) {
         if (email != null && password != null) {
             mAuth.createUserWithEmailAndPassword(email, password)
                     .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if (task.isSuccessful()) {
-                                Intent homeIntent = new Intent(getApplicationContext(), parent.class);
+                                Intent homeIntent = new Intent(getApplicationContext(), child.class);
                                 startActivity(homeIntent);
-                                MainActivity.firebaseHelper.addUser(email, false, name);
+                                MainActivity.firebaseHelper.addUser(email, false, name, uid);
                             }
 
                             // add more specific error messages

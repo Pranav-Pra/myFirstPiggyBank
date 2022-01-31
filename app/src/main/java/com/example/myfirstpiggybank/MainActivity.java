@@ -82,7 +82,7 @@ public class MainActivity extends AppCompatActivity {
                             if (task.isSuccessful()) {
                                 Intent homeIntent = new Intent(getApplicationContext(), parent.class);
                                 startActivity(homeIntent);
-                                firebaseHelper.addUser(email, true, "");
+                                firebaseHelper.addUser(email, true, "", email);
                             }
 
                             // add more specific error messages
