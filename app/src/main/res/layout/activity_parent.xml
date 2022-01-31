@@ -7,7 +7,20 @@
     tools:context=".parent">
 
     <Button
-        android:id="@+id/signOutParent"
+        android:id="@+id/signUpChild"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="toChildSignUp"
+        android:text="Add Child"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.052"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.023" />
+
+    <Button
+        android:id="@+id/signOutParent2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="signOut"
