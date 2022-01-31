@@ -89,5 +89,9 @@ public class parent extends AppCompatActivity {
         Intent intent = new Intent(this, ParentChores.class);
         startActivity(intent);
     }
+    public void toParentTransactions(View v){
+        Intent intent = new Intent(this, ParentTransaction.class);
+        startActivity(intent);
+    }
 
 }
