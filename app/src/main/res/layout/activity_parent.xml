@@ -4,20 +4,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".parent">
+    tools:context=".parent"
+    android:background="#EDF0F5">
 
     <Button
         android:id="@+id/signUpChild"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="117dp"
+        android:layout_height="56dp"
         android:onClick="toChildSignUp"
         android:text="Add Child"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.052"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.023" />
+        app:layout_constraintVertical_bias="0.795" />
 
     <Button
         android:id="@+id/signOutParent2"
@@ -32,35 +32,56 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.023" />
 
-    <Button
-        android:id="@+id/transactionButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/margin"
-        android:layout_marginTop="@dimen/margin"
-        android:text="Transactions"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/choreButton" />
-
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="@dimen/logoWidth"
-        android:layout_height="@dimen/logoHeight"
-        android:layout_marginTop="@dimen/topMarginTopItem"
+        android:layout_width="225dp"
+        android:layout_height="231dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/logo" />
+        app:layout_constraintVertical_bias="0.2"
+        app:srcCompat="@drawable/_65363f533c346deab85af53009a9ec0" />
 
     <Button
         android:id="@+id/choreButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="169dp"
+        android:layout_height="49dp"
         android:layout_margin="@dimen/margin"
         android:onClick="toParentChores"
-        android:text="Chores"
+        android:text="Add Chores"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.508"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/choreButton2"
+        android:layout_width="172dp"
+        android:layout_height="46dp"
+        android:layout_margin="@dimen/margin"
+        android:onClick="toParentChores"
+        android:text="Verify Chores"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.514"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.585" />
+
+    <Button
+        android:id="@+id/transactionButton"
+        android:layout_width="172dp"
+        android:layout_height="48dp"
+        android:layout_margin="@dimen/margin"
+        android:layout_marginTop="12dp"
+        android:text="Transactions"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.514"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.667" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
