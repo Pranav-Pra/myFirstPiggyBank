@@ -76,6 +76,7 @@
         android:layout_height="48dp"
         android:layout_margin="@dimen/margin"
         android:layout_marginTop="12dp"
+        android:onClick="toParentTransactions"
         android:text="Transactions"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

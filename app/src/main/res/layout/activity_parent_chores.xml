@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ParentChores"
-    android:background="#EDF0F5">
+    tools:context=".ParentChores">
 
     <TextView
         android:id="@+id/textView3"
@@ -36,26 +35,35 @@
         android:id="@+id/choreET"
         android:layout_width="@dimen/etWidth"
         android:layout_height="@dimen/etHeight"
-        android:layout_marginTop="144dp"
+        android:layout_marginTop="@dimen/topMarginTopItem"
         android:ems="10"
         android:hint="Chore"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/descET"
+        android:layout_width="@dimen/etWidth"
+        android:layout_height="@dimen/etHeight"
+        android:layout_margin="@dimen/margin"
+        android:ems="10"
+        android:hint="Description"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/choreET" />
 
     <EditText
         android:id="@+id/valueET"
         android:layout_width="@dimen/etWidth"
         android:layout_height="@dimen/etHeight"
         android:layout_margin="@dimen/margin"
-        android:layout_marginTop="24dp"
         android:ems="10"
         android:hint="Value"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/descET" />
 
@@ -64,26 +72,9 @@
         android:layout_width="@dimen/buttonWidth"
         android:layout_height="@dimen/buttonHeight"
         android:layout_margin="@dimen/margin"
-        android:layout_marginTop="28dp"
         android:onClick="addChore"
         android:text="Add"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/valueET" />
-
-    <EditText
-        android:id="@+id/descET"
-        android:layout_width="@dimen/etWidth"
-        android:layout_height="@dimen/etHeight"
-        android:layout_margin="@dimen/margin"
-        android:layout_marginTop="32dp"
-        android:ems="10"
-        android:hint="Description"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.503"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/choreET" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>

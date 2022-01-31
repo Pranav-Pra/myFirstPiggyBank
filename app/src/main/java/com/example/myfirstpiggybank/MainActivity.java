@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -50,13 +51,14 @@ public class MainActivity extends AppCompatActivity {
     public void accessAccount(View v){
         switch(v.getId()){
             case R.id.parentSignUpButton:
-                EditText emailSignUpP = findViewById(R.id.emailSignUpChild);
+                EditText emailSignUpP = findViewById(R.id.emailSignUpPT);
                 EditText passSignUpP = findViewById(R.id.passSignUpPT);
                 EditText conPassSignUpP = findViewById(R.id.confirmPassSignUpPT);
 
                 String signUpEmailP = emailSignUpP.getText().toString();
                 String signUpPasswordP = passSignUpP.getText().toString();
                 String confirmPasswordP = conPassSignUpP.getText().toString();
+
                 if(confirmPasswordP.equals(signUpPasswordP)) {
                     signUpParent(signUpEmailP, signUpPasswordP);
                 }
@@ -72,14 +74,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void signUpParent(String email, String password) {
-
         if (email != null && password != null) {
             mAuth.createUserWithEmailAndPassword(email, password)
                     .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if (task.isSuccessful()) {
-                                FirebaseUser user = mAuth.getCurrentUser();
                                 Intent homeIntent = new Intent(getApplicationContext(), parent.class);
                                 startActivity(homeIntent);
                                 firebaseHelper.addUser(email, true, "");

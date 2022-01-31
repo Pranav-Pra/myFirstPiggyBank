@@ -33,12 +33,12 @@ public class FirebaseHelper {
             Map<String, Object> userData = new HashMap<>();
             userData.put("email", username);
             db.collection("parents").document(username).set(userData)
-                .addOnSuccessListener(new OnSuccessListener<Void>() {
-                    @Override
-                    public void onSuccess(Void unused) {
-                        Log.i(TAG, username + " Parent has been added");
-                    }
-                }).addOnFailureListener(new OnFailureListener() {
+                    .addOnSuccessListener(new OnSuccessListener<Void>() {
+                        @Override
+                        public void onSuccess(Void unused) {
+                            Log.i(TAG, username + " Parent has been added");
+                        }
+                    }).addOnFailureListener(new OnFailureListener() {
                 @Override
                 public void onFailure(@NonNull Exception e) {
                     Log.d(TAG, "Failed to sign up " + username);
