@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyFirstPiggyBank">
         <activity
+            android:name=".ParentTransaction"
+            android:exported="true" />
+        <activity
             android:name=".ChildTransaction"
             android:exported="false" />
         <activity

@@ -4,26 +4,24 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_gravity="center"
-    tools:context=".ChildChores"
+    tools:context=".ParentTransaction"
     android:background="#EDF0F5">
 
-
     <TextView
-        android:id="@+id/textView6"
-        android:layout_width="165dp"
-        android:layout_height="90dp"
-        android:text="Chores"
+        android:id="@+id/textView4"
+        android:layout_width="167dp"
+        android:layout_height="96dp"
+        android:text="View Transactions"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.345"
+        app:layout_constraintHorizontal_bias="0.348"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.081" />
+        app:layout_constraintVertical_bias="0.062" />
 
     <ImageView
-        android:id="@+id/imageView11"
+        android:id="@+id/imageView9"
         android:layout_width="69dp"
         android:layout_height="70dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -33,15 +31,4 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.06"
         app:srcCompat="@drawable/piggybank" />
-
-    <LinearLayout
-        android:id="@+id/root"
-        android:layout_width="415dp"
-        android:layout_height="721dp"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
-
 </androidx.constraintlayout.widget.ConstraintLayout>
