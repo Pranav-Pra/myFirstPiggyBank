@@ -18,19 +18,6 @@
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/_65363f533c346deab85af53009a9ec0" />
 
-    <Button
-        android:id="@+id/childSignInButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="accessAccount"
-        android:text="Child"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.657"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.527" />
-
     <EditText
         android:id="@+id/emailSignInPT"
         android:layout_width="wrap_content"
@@ -64,11 +51,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="accessAccount"
-        android:text="Parent"
+        android:text="Sign Up"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.311"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.527" />
+        app:layout_constraintVertical_bias="0.518" />
 </androidx.constraintlayout.widget.ConstraintLayout>
